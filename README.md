@@ -1,5 +1,7 @@
 # Lake Ice Monitoring with Webcams and Crowd-Sourced Images
 
+![Lake Detection and Lake Ice Monitoring](images/lakeice_webcams.png)
+
 This repo implements our paper:
 Prabha R., Tom M., Rothermel M., Baltsavias E., Leal-​Taixe L., Schindler K.: [Lake Ice Monitoring with Webcams and Crowd-​Sourced Images](https://arxiv.org/pdf/2002.07875.pdf), ISPRS Congress, Nice, France, 2020 (accepted for publication)
 
