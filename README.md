@@ -3,8 +3,6 @@
 This repo implements our paper:
 Prabha R., Tom M., Rothermel M., Baltsavias E., Leal-​Taixe L., Schindler K.: [Lake Ice Monitoring with Webcams and Crowd-​Sourced Images](https://arxiv.org/pdf/2002.07875.pdf), ISPRS Congress, Nice, France, 2020 (accepted for publication)
 
-Please cite our paper if you use this code
-
 ## What this repo contains?
 1. Deeplab v3+ tensorflow model adopted from official tensorflow repository with some changes.
   (a). Code for calculating Individual class IoU. 
@@ -83,6 +81,17 @@ For evaluation and visualization, run the eval_lakeice.sh script.
    Look for empty lines in the dataset/"your dataset"/List/"train or val".txt files.
   
 3. Dataset split  in train.py and eval.py, be careful to not use the default "trainval" split from original tensorflow deeplab    repository.
+
+## Citation
+Please cite our paper, if you use this repo:
+
+@inproceedings{prabha_tom_2010:isprs,
+author={Prabha, R. and Tom, M. and Rothermel, M. and Baltsavias, E. and Leal-Taixe, L. and Schindler, K.},
+booktitle={ISPRS Congress},
+title={Lake Ice Monitoring with Webcams and Crowd-Sourced Images},
+year={2020},
+}
+
 
 ## References
 1. Chen Liang-Chieh et. al 2018, Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation, ECCV. https://github.com/tensorflow/models/tree/master/research/deeplab
