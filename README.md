@@ -37,8 +37,6 @@ Folder structure:
 Voila, now you have the dataset to train your model.
 
 
-
-
 By simply running the train_lakeice.sh, the training will start.
 For parameters: the specified values were used for all experiments.
 1. Setup up the tensorflow records in LAKEICE_DATASET parameter.
@@ -68,8 +66,6 @@ For evaluation and visualization, run the eval_lakeice.sh script.
    --skips=0 
    --eval_crop_size="325,1210"    -> Full image eval_crop_size 
    --max_number_of_evaluations=1  -> If set to 1, evaluation script will run once and exit. If >1, it will keep checking the train logdir for new checkpoints. Useful, when running both train and eval scripts simultaneously (alloting part of GPU to both). 
-
-## Results and Visualisations.
 
 ## Beware of some common bugs.
 1. for no modules called nets.
