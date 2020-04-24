@@ -1,7 +1,8 @@
 # Lake Ice Monitoring with Webcams and Crowd-Sourced Images
 
 This repo implements our paper:
-Prabha R., Tom M., Rothermel M., Baltsavias E., Leal-​Taixe L., Schindler K.: Lake Ice Monitoring with Webcams and Crowd-​Sourced Images, ISPRS Congress, Nice, France, 2020
+Prabha R., Tom M., Rothermel M., Baltsavias E., Leal-​Taixe L., Schindler K.: [Lake Ice Monitoring with Webcams and Crowd-​Sourced Images](https://arxiv.org/pdf/2002.07875.pdf), ISPRS Congress, Nice, France, 2020 (accepted for publication)
+
 Please cite our paper if you use this code
 
 ## What this repo contains?
@@ -10,7 +11,7 @@ Please cite our paper if you use this code
   (b). Code for checking confusion matrix on tensorboard.
   (c). Updated xception_65 model with extra skips from encoder to decoder.
 2. Using labelme tool to create data annotations and code for converting json annotations to color-indexed masks.
-3. Some data cleaning scripts (only valid for our Photi-Lake-ice dataset).
+3. Some data cleaning scripts (only valid for our Photi-LakeIce dataset).
 4. Jupyter Notebook for visualizing data distribution for 5 classes : background, water, ice, snow, clutter.
 5. Jupyter Notebook for inference using a saved tensorflow checkpoint.
 
