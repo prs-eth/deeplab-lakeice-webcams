@@ -1,0 +1,6 @@
+__ignore__
+_background_
+water
+ice
+snow
+clutter
