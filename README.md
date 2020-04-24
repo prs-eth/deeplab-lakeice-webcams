@@ -1,12 +1,16 @@
-# Lake-Ice monitoring of Alpine lakes using webcam Images and crowdsourced data.
+# Lake Ice Monitoring with Webcams and Crowd-Sourced Images
+
+This repo implements our paper:
+Prabha R., Tom M., Rothermel M., Baltsavias E., Leal-​Taixe L., Schindler K.: Lake Ice Monitoring with Webcams and Crowd-​Sourced Images, ISPRS Congress, Nice, France, 2020
+Please cite our paper if you use this code
 
 ## What this repo contains?
-1. Deeplab v3 plus tensorflow model adopted from official tensorflow repository with some changes.    
-  (a). Code for calculating Individual class IOU.     
-  (b). Code for checking confusion matrix on tensorboard.     
-  (c). Updated xception_65 model with extra skips from encoder to decoder.      
+1. Deeplab v3+ tensorflow model adopted from official tensorflow repository with some changes.
+  (a). Code for calculating Individual class IoU. 
+  (b). Code for checking confusion matrix on tensorboard.
+  (c). Updated xception_65 model with extra skips from encoder to decoder.
 2. Using labelme tool to create data annotations and code for converting json annotations to color-indexed masks.
-3. Some data cleaning scripts (only valid for our lake-ice dataset).
+3. Some data cleaning scripts (only valid for our Photi-Lake-ice dataset).
 4. Jupyter Notebook for visualizing data distribution for 5 classes : background, water, ice, snow, clutter.
 5. Jupyter Notebook for inference using a saved tensorflow checkpoint.
 
@@ -39,32 +43,32 @@ Voila, now you have the dataset to train your model.
 By simply running the train_lakeice.sh, the training will start.
 For parameters: the specified values were used for all experiments.
 1. Setup up the tensorflow records in LAKEICE_DATASET parameter.
-2. --model_variant="xception_65" -> Change to "xception_65_skips" to use Deep-U-Lab  
-   --skips=0                     -> Change to 1, if using "xception_65_skips"  
-   --atrous_rates=6   
-   --atrous_rates=12   
-   --atrous_rates=18    
-   --output_stride=16   
-   --decoder_output_stride=4   
-   --train_crop_size="321,321"   -> Used 512,512 for lake-detection and 321,321 for lake-ice segmentation  
-   --dataset="lake"               
-   --train_batch_size=8          -> Set according to GPU availability. This should be >=16 for tuning the batch norm layers  
-   --training_number_of_steps="${NUM_ITERATIONS}"    
-   --fine_tune_batch_norm=false  -> Set to "true" if train_batch_size>=16      
-   --train_logdir="${TRAIN_LOGDIR}"    
-   --base_learning_rate=0.0001    
-   --learning_policy="poly"        
-   --tf_initial_checkpoint="/home/pf/pfshare/data/MA_Rajanie/pretrained/deeplabv3_pascal_trainval/model.ckpt"       
-   --dataset_dir="${LAKEICE_DATASET}"     
+2. --model_variant="xception_65" -> Change to "xception_65_skips" to use Deep-U-Lab 
+   --skips=0                     -> Change to 1, if using "xception_65_skips" 
+   --atrous_rates=6 
+   --atrous_rates=12 
+   --atrous_rates=18 
+   --output_stride=16 
+   --decoder_output_stride=4 
+   --train_crop_size="321,321"   -> Used 512,512 for lake-detection and 321,321 for lake-ice segmentation 
+   --dataset="lake" 
+   --train_batch_size=8          -> Set according to GPU availability. This should be >=16 for tuning the batch norm layers 
+   --training_number_of_steps="${NUM_ITERATIONS}"
+   --fine_tune_batch_norm=false  -> Set to "true" if train_batch_size>=16 
+   --train_logdir="${TRAIN_LOGDIR}" 
+   --base_learning_rate=0.0001 
+   --learning_policy="poly" 
+   --tf_initial_checkpoint="/your_checkpoint_folder_name/model.ckpt" (You may update this!) 
+   --dataset_dir="${LAKEICE_DATASET}" 
    
 
-For evaluation and visualization, run the eval_lakeice.sh script.  
+For evaluation and visualization, run the eval_lakeice.sh script.
   
-   --eval_split="val"             -> Split should be "val", instead of "train"     
+   --eval_split="val"             -> Split should be "val", instead of "train" 
    --model_variant="xception_65"  -> Same rules as train script
-   --skips=0    
-   --eval_crop_size="325,1210"    -> Full image eval_crop_size   
-   --max_number_of_evaluations=1  -> If set to 1, evaluation script will run once and exit. If >1, it will keep checking the train logdir for new checkpoints. Useful, when running both train and eval scripts simultaneously (alloting part of GPU to both).    
+   --skips=0 
+   --eval_crop_size="325,1210"    -> Full image eval_crop_size 
+   --max_number_of_evaluations=1  -> If set to 1, evaluation script will run once and exit. If >1, it will keep checking the train logdir for new checkpoints. Useful, when running both train and eval scripts simultaneously (alloting part of GPU to both). 
 
 ## Results and Visualisations.
 
