@@ -72,7 +72,7 @@ For evaluation and visualization, run the eval_lakeice.sh script.
    --max_number_of_evaluations=1  -> If set to 1, evaluation script will run once and exit. If >1, it will keep checking the train logdir for new checkpoints. Useful, when running both train and eval scripts simultaneously (alloting part of GPU to both). 
 
 ## Pre-trained model
-[Download](https://polybox.ethz.ch/index.php/s/wxHbKSlap3iNOkE) the model pre-trained on Lake St. Moritz data (Cam0, winter 2016-17)
+[Download](https://polybox.ethz.ch/index.php/s/MTlraLbeAUgICqm) the model pre-trained on Lake St. Moritz data (Cam0, winter 2016-17)
 
 ## Beware of some common bugs.
 1. for no modules called nets.
