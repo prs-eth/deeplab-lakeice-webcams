@@ -88,12 +88,14 @@ For evaluation and visualization, run the eval_lakeice.sh script.
 ## Citation
 Please cite our paper, if you use this repo:
 
-@inproceedings{prabha_tom_2020:isprs,
-author={Prabha, R. and Tom, M. and Rothermel, M. and Baltsavias, E. and Leal-Taixe, L. and Schindler, K.},
-booktitle={arXiv preprint: arXiv:2002.07875v2},
-title={Lake Ice Monitoring with Webcams and Crowd-Sourced Images},
-year={2020},
-}
+>@inproceedings{prabha_tom_2020:isprs,<br>
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author={Prabha, R. and Tom, M. and Rothermel, M. and Baltsavias, E. and Leal-Taixe, L. and Schindler, K.},<br>
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title={Lake Ice Monitoring with Webcams and Crowd-Sourced Images},<br>
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;booktitle={ISPRS Ann. Photogramm. Remote Sens. Spatial Inf. Sci.},<br>
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;year={2020},
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;volume={V-2-2020},
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pages={549–556},
+>}
 
 
 ## References
