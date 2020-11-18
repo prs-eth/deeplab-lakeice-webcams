@@ -90,7 +90,7 @@ For evaluation and visualization, run the eval_lakeice.sh script.
 ## Citation
 Please cite our paper, if you use this repo:
 
->@inproceedings{prabha_tom_2020:isprs,<br>
+>@article{prabha_tom_2020:isprs,<br>
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author={Rajanie Prabha and Manu Tom and Mathias Rothermel and Emmanuel Baltsavias and Laura Leal-Taixe and Konrad Schindler},<br>
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title={Lake Ice Monitoring with Webcams and Crowd-Sourced Images},<br>
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;booktitle={ISPRS Ann. Photogramm. Remote Sens. Spatial Inf. Sci.},<br>
