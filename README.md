@@ -1,11 +1,13 @@
 # Lake Ice Monitoring with Webcams and Crowd-Sourced Images
 
-This repository is the implementation (Tensorflow) our paper:
-Prabha R., Tom M., Rothermel M., Baltsavias E., Leal-​Taixe L., Schindler K.: [Lake Ice Monitoring with Webcams and Crowd-​Sourced Images](https://arxiv.org/pdf/2002.07875.pdf), ISPRS Congress, Nice, France, 2020 (accepted for publication)
+This repository provides the implementation (tensorflow), pre-trained model and dataset corresponding to the paper:<br>
+
+>[Lake Ice Monitoring with Webcams and Crowd-​Sourced Images](https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/V-2-2020/549/2020/) (presented at the ISPRS Congress, 2020, virtual conference)<br>
+> by Rajanie Prabha, Manu Tom, Mathias Rothermel, Emmanuel Baltsavias, Laura Leal-Taixe and Konrad Schindler
 
 ![Lake Detection and Lake Ice Monitoring](images/lakeice_webcams.png)
 
-This work is part of the [Lake Ice Project (Phase 2)](https://prs.igp.ethz.ch/research/current_projects/integrated-lake-ice-monitoring-and-generation-of-sustainable--re.html). Here is the link to [Phase 1](https://prs.igp.ethz.ch/research/completed_projects/integrated-monitoring-of-ice-in-selected-swiss-lakes.html) of the same project. 
+This work is part of the [Lake Ice Project (Phase 2)](https://prs.igp.ethz.ch/research/current_projects/integrated-lake-ice-monitoring-and-generation-of-sustainable--re.html)  funded by MeteoSwiss in the GCOS Switzerland framework. Here is the link to [Phase 1](https://prs.igp.ethz.ch/research/completed_projects/integrated-monitoring-of-ice-in-selected-swiss-lakes.html) of the same project. 
 
 ## What this repo contains?
 1. Deeplab v3+ tensorflow model adopted from official tensorflow repository with some changes.
@@ -72,7 +74,7 @@ For evaluation and visualization, run the eval_lakeice.sh script.
    --max_number_of_evaluations=1  -> If set to 1, evaluation script will run once and exit. If >1, it will keep checking the train logdir for new checkpoints. Useful, when running both train and eval scripts simultaneously (alloting part of GPU to both). 
 
 ## Pre-trained model
-[Download](https://share.phys.ethz.ch/~pf/tommdata/Pre-trained_Model.tar.xz) the model pre-trained on Lake St. Moritz data (Cam0, winter 2016-17) from the [Photi-LakeIce dataset](https://github.com/czarmanu/photi-lakeice-dataset)
+[Download](https://share.phys.ethz.ch/~pf/tommdata/Pre-trained_Model.tar.xz) the model pre-trained on Lake St. Moritz data (Cam0, winter 2016-17) from the [Photi-LakeIce dataset](https://github.com/czarmanu/photi-lakeice-dataset). Approximate size: 146 MB
 
 ## Beware of some common bugs.
 1. for no modules called nets.
@@ -89,22 +91,21 @@ For evaluation and visualization, run the eval_lakeice.sh script.
 Please cite our paper, if you use this repo:
 
 >@inproceedings{prabha_tom_2020:isprs,<br>
->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author={Prabha, R. and Tom, M. and Rothermel, M. and Baltsavias, E. and Leal-Taixe, L. and Schindler, K.},<br>
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author={Rajanie Prabha and Manu Tom and Mathias Rothermel and Emmanuel Baltsavias and Laura Leal-Taixe and Konrad Schindler},<br>
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title={Lake Ice Monitoring with Webcams and Crowd-Sourced Images},<br>
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;booktitle={ISPRS Ann. Photogramm. Remote Sens. Spatial Inf. Sci.},<br>
->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;year={2020},
->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;volume={V-2-2020},
->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pages={549–556},
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;year={2020},<br>
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;volume={V-2-2020},<br>
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pages={549–556},<br>
 >}
 
-
-## References
-1. Chen Liang-Chieh et. al 2018, Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation, ECCV. https://github.com/tensorflow/models/tree/master/research/deeplab
-    
-2. Wad Ketaro 2016, labelme: Image Polygonal Annotation with Python. https://github.com/wkentaro/labelme
-
-3. Photi-Lake Ice Dataset ([Github repo](https://github.com/czarmanu/photi-lakeice-dataset))
-
+## Useful links
+1. Photi-Lake Ice Dataset ([Github repo](https://github.com/czarmanu/photi-lakeice-dataset))
+2. Multi-sensor lake ice monitoring with machine (deep) learning. [Project github page](https://github.com/czarmanu/lake-ice-ml).
+3. Lake ice detection from Sentinel-1 SAR with deep learning. [Github repo (tensorflow code, pre-trained model)](https://github.com/czarmanu/sentinel_lakeice). [Paper](https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/V-3-2020/409/2020/) 
+4. Tom, M., Suetterlin, M., Bouffard, D., Rothermel, M., Wunderle, S., Baltsavias, E., 2019. [Integrated monitoring of ice in selected Swiss lakes](https://arxiv.org/abs/2008.00512). Final Project Report
+5. Tom et al. 2020, [Ice monitoring in Swiss lakes from optical satellites and webcams using machine learning](https://www.mdpi.com/2072-4292/12/21/3555), MDPI Remote Sensing, 12(21), 3555
+6. [Deeplab v3+](https://github.com/tensorflow/models/tree/master/research/deeplab) 
 
 ## Licence
 
